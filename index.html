@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Freelancer - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+    <style>
+    @keyframes click-wave {
+  0% {
+    height: 20px;
+    width: 20px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 100px;
+    width: 100px;
+    margin-left: -40px;
+    margin-top: -40px;
+    opacity: 0;
+  }
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  /*top: 13.33333px;*/
+  top: 2px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #9faab7;
+}
+.option-input:checked {
+  background: #40e0d0;
+}
+.option-input:checked::before {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  content: '✔';
+  display: inline-block;
+  font-size: 13.66667px;
+  text-align: center;
+  line-height: 20px;
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+
+
+.btn {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 2px solid #40e0d0;
+  border-radius: 0.6em;
+  color: #40e0d0;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.btn:hover, .btn:focus {
+  color: #fff;
+  outline: 0;
+}
+
+.first {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.first:hover {
+  box-shadow: 0 0 40px 40px #40e0d0 inset;
+}
+
+
+</style>
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead bg-primary text-white text-center">
+      <div class="container">
+        <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
+        <h1 class="text-uppercase mb-0">MauriHealth</h1>
+        <hr class="star-light">
+        <h2 class="font-weight-light mb-0">User input disease data collection</h2>
+      </div>
+    </header>
+
+    
+    <!-- About Section -->
+    <section class="bg-primary text-white mb-0" id="about">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-white">About</h2>
+        <hr class="star-light mb-5">
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <p class="lead">MauriHealth is an upcoming real time system that will detect infectious diseases outbreaks throughout different regions found in Mauritius.</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">This portal is where users can give their input on what diseases they may have contracted and when. This information will help for the system to detect these outbreaks earlier. The user will enter their information anonymously.</p>
+          </div>
+        </div>
+        <!--<div class="text-center mt-4">
+          <a class="btn btn-xl btn-outline-light" href="#">
+            <i class="fas fa-download mr-2"></i>
+            Download Now!
+          </a>
+        </div>-->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Contribute to the system by giving disease information below.</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+            <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+            <!--
+            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Disease type:</label>
+                  <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name.">
+                  <div id="name">
+                  <input class="form-control" type="radio" name="diseasetype" value="Influenza" required="required">Influenza<br>
+                  <input class="form-control" type="radio" name="diseasetype" value="Gastro" required="required">Gastroenteritis<br>
+                  <input class="form-control" type="radio" name="diseasetype" value="Conjunctivitis" required="required" >Conjunctivitis<br>
+                  <input class="form-control" type="radio" name="diseasetype" value="UTR" required="required">Upper Tract Respiratory Infection<br>
+                </div>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Location:</label>
+                  <input class="form-control" type="text" id="email" placeholder="e.g Port Louis" required="required" data-validation-required-message="Please enter your location.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Date:</label>
+                  <input class="form-control" type="date" id="phone" placeholder="Date">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Message</label>
+                  <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+              </div>
+            </form>-->
+            <form name="feedback" id="contactForm" novalidate="novalidate">
+                <label style="font-size: 20px"><strong>Disease type:</strong></label>
+                <table>
+                  <tr>
+                    <td> <input type="radio" name="diseasetype" value="Influenza" required="required" class="option-input radio"> 
+                   </td>
+                    <td style="text-indent: 30px; font-size: 18px">Influenza</td>
+                  </tr><tr>
+                    <td> <input type="radio" name="diseasetype" value="Gastro" required="required" class="option-input radio"> </td>
+                    <td style="text-indent: 30px; font-size: 18px">Gastroenteritis</td>
+                  </tr>
+                  <tr>
+                    <td> <input type="radio" name="diseasetype" value="Conjunctivitis" required="required" class="option-input radio"> </td>
+                    <td style="text-indent: 30px; font-size: 18px">Conjunctivitis</td>
+                  </tr><tr>
+                    <td> <input type="radio" name="diseasetype" value="UTR" required="required" class="option-input radio"> </td>
+                    <td style="text-indent: 30px; font-size: 18px">Upper Tract Respiratory infection</td>
+                  </tr>
+                </table>
+                <br><br>
+                <table cellpadding="8px">
+                  <tr><td>
+                <label style="font-size: 20px"><strong>Location:</strong></label></td>
+                <td style="text-indent: 30px;">
+                <input type = "text" name="location" placeholder="e.g Port Louis" required="required" font-size: 18px">
+              </td></tr>
+                <tr><td>
+                <label style="font-size: 20px"><strong>Date:</strong></label></td>
+                <td style="text-indent: 30px;">
+                <input type="date" name="date" required="required"></td></tr>
+                <tr><td>
+                <label style="font-size: 20px"><strong>Additional information:</strong></label></td>
+                <td style="text-indent: 30px;">
+                <textarea></textarea></td>
+                </tr></table>
+                <button class="btn first">Submit</button>
+            </form> 
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>Copyright &copy; MauriHealth 2018</small>
+      </div>
+    </div>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+
+  </body>
+
+</html>
