@@ -301,7 +301,7 @@
                 <td style="text-indent: 30px;">
                 <textarea id="msg"></textarea></td>
                 </tr></table>
-                <button class="btn first" onclick="saveToFirebase();">Submit</button>
+                <button class="btn first" id="submitBtn">Submit</button>
             </form>
 
             
@@ -342,10 +342,13 @@
         firebase.initializeApp(config);
   </script>
 
-  <script type="text/javascript">
+  <script>
+    document.getElementById("submitBtn").addEventListener("click", saveToFirebase);
+
 
               function saveToFirebase() {
-                document.getElementbyClass('btn first').innerHTML = "Submitting";
+                var btnText= document.getElementbyId("submitBtn");
+                btnText.innerHTML = "Submitting";
               var disease_type = document.feedback.getElementbyId('disease_selection').value;
               var location = document.feedback.getElementbyId('loc').value;
               var date = document.feedback.getElementbyId('date').value;
@@ -357,10 +360,10 @@
 
                   firebase.database().ref('post-entries').push().set(postObject)
                       .then(function(snapshot) {
-                          buttonText.innerHTML = "Submitted";// some success method
+                          btnText.innerHTML = "Submitted";// some success method
                       }, function(error) {
                           console.log('error' + error);
-                          buttonText.innerHTML = "Error"; // some error method
+                          btnText.innerHTML = "Error"; // some error method
                       });
 }
             </script> 
