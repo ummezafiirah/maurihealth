@@ -137,7 +137,6 @@
 
 </style>
 <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
-    <!--<script src="firebase.js"></script>-->
 
     <script>
   // Initialize Firebase
@@ -331,10 +330,10 @@
 
                   firebase.database().ref('post-entries').push().set(postObject)
                       .then(function(snapshot) {
-                          success(); // some success method
+                          buttonText.innerHTML = "Submitted";// some success method
                       }, function(error) {
                           console.log('error' + error);
-                          error(); // some error method
+                          buttonText.innerHTML = "Error"; // some error method
                       });
 }
             </script> 
