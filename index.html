@@ -136,20 +136,7 @@
 
 
 </style>
-<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
 
-    <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAUEaL8MJdiJj5XIG1-FOJI-6GfMCL34Y4",
-    authDomain: "fyproject-f9eee.firebaseapp.com",
-    databaseURL: "https://fyproject-f9eee.firebaseio.com",
-    projectId: "fyproject-f9eee",
-    storageBucket: "fyproject-f9eee.appspot.com",
-    messagingSenderId: "431645628823"
-  };
-  firebase.initializeApp(config);
-  </script>
 
   </head>
 
@@ -316,7 +303,46 @@
                 </tr></table>
                 <button class="btn first" onclick="saveToFirebase();">Submit</button>
             </form>
-            <script type="text/javascript">
+
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>Copyright &copy; MauriHealth 2018</small>
+      </div>
+    </div>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- """""""""""""js scripts""""""""""""""""-->
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+
+    <script>
+  // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyAUEaL8MJdiJj5XIG1-FOJI-6GfMCL34Y4",
+          authDomain: "fyproject-f9eee.firebaseapp.com",
+          databaseURL: "https://fyproject-f9eee.firebaseio.com",
+          projectId: "fyproject-f9eee",
+          storageBucket: "fyproject-f9eee.appspot.com",
+          messagingSenderId: "431645628823"
+        };
+        firebase.initializeApp(config);
+  </script>
+
+  <script type="text/javascript">
 
               function saveToFirebase() {
                 document.getElementbyClass('btn first').innerHTML = "Submitting";
@@ -338,25 +364,6 @@
                       });
 }
             </script> 
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-
-    <div class="copyright py-4 text-center text-white">
-      <div class="container">
-        <small>Copyright &copy; MauriHealth 2018</small>
-      </div>
-    </div>
-
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-to-top d-lg-none position-fixed ">
-      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
-        <i class="fa fa-chevron-up"></i>
-      </a>
-    </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
