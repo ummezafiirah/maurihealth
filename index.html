@@ -136,6 +136,7 @@
 
 
 </style>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
 
 
   </head>
@@ -264,7 +265,10 @@
                 <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
               </div>
             </form>-->
-            <form name="feedback" id="contactForm" novalidate="novalidate">
+            <form action="https://getsimpleform.com/messages?form_api_token=5187dc58be4648f24c7cde2bbe746c04" method="post">
+
+              <input type='hidden' name='redirect_to' value='https://ndoomah.github.io/maurihealth/' />
+
                 <label style="font-size: 20px"><strong>Disease type:</strong></label>
                 <div id="disease_selection">
                 <table>
@@ -273,14 +277,14 @@
                    </td>
                     <td style="text-indent: 30px; font-size: 18px">Influenza</td>
                   </tr><tr>
-                    <td> <input type="radio" name="diseasetype" value="Gastro" required="required" class="option-input radio"> </td>
+                    <td> <input type="radio" name="diseasetype" value="Gastro" class="option-input radio"> </td>
                     <td style="text-indent: 30px; font-size: 18px">Gastroenteritis</td>
                   </tr>
                   <tr>
-                    <td> <input type="radio" name="diseasetype" value="Conjunctivitis" required="required" class="option-input radio"> </td>
+                    <td> <input type="radio" name="diseasetype" value="Conjunctivitis" class="option-input radio"> </td>
                     <td style="text-indent: 30px; font-size: 18px">Conjunctivitis</td>
                   </tr><tr>
-                    <td> <input type="radio" name="diseasetype" value="UTR" required="required" class="option-input radio"> </td>
+                    <td> <input type="radio" name="diseasetype" value="UTR" class="option-input radio"> </td>
                     <td style="text-indent: 30px; font-size: 18px">Upper Tract Respiratory infection</td>
                   </tr>
                 </table>
@@ -301,9 +305,10 @@
                 <td style="text-indent: 30px;">
                 <textarea id="msg"></textarea></td>
                 </tr></table>
-                <button class="btn first" id="submitBtn">Submit</button>
-            </form>
-
+                <!--<button id="submitBtn" class="btn first">Submit</button>-->
+                <div id="success"></div>
+                <button type="submit" id="submitBtn" onClick='changeTxt();'>Submit</button>
+              </form>
             
           </div>
         </div>
@@ -327,9 +332,8 @@
 
     <!-- """""""""""""js scripts""""""""""""""""-->
 
-    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
 
-    <script>
+    <!--<script>
   // Initialize Firebase
         var config = {
           apiKey: "AIzaSyAUEaL8MJdiJj5XIG1-FOJI-6GfMCL34Y4",
@@ -343,15 +347,15 @@
   </script>
 
   <script>
-    document.getElementById("submitBtn").addEventListener("click", saveToFirebase);
+    document.getElementbyId("submitBtn").addEventListener("click", function(){
 
 
-              function saveToFirebase() {
+              //function saveToFirebase() {
                 var btnText= document.getElementbyId("submitBtn");
                 btnText.innerHTML = "Submitting";
-              var disease_type = document.feedback.getElementbyId('disease_selection').value;
-              var location = document.feedback.getElementbyId('loc').value;
-              var date = document.feedback.getElementbyId('date').value;
+              var disease_type = document.getElementbyId('disease_selection').value;
+              var location = document.getElementbyId('loc').value;
+              var date = document.getElementbyId('date').value;
                   var postObject = {
                       disease: disease_type,
                       location: location,
@@ -362,11 +366,17 @@
                       .then(function(snapshot) {
                           btnText.innerHTML = "Submitted";// some success method
                       }, function(error) {
-                          console.log('error' + error);
+                          console.log('error');
                           btnText.innerHTML = "Error"; // some error method
                       });
-}
-            </script> 
+});
+            </script> -->
+            <script>
+              function changeTxt(){
+              var btnText = document.getElementbyId("submitBtn");
+              btnText.innerHTML = "Submitted";
+ }
+            </script>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

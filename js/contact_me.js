@@ -1,33 +1,33 @@
 $(function() {
 
-  $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
+  $("#contactForm input").jqBootstrapValidation({
     preventSubmit: true,
     submitError: function($form, event, errors) {
-      // additional error messages or events
+      print("error");// additional error messages or events
     },
     submitSuccess: function($form, event) {
       event.preventDefault(); // prevent default submit behaviour
       // get values from FORM
-      var name = $("input#name").val();
-      var email = $("input#email").val();
-      var phone = $("input#phone").val();
-      var message = $("textarea#message").val();
-      var firstName = name; // For Success/Failure Message
+      //var diseasetype = $("input#disease_selection").val();
+      var location = $("input#loc").val();
+      var date = $("input#date").val();
+      //var message = $("textarea#message").val();
+      //var firstName = name; // For Success/Failure Message
       // Check for white space in name for Success/Fail message
-      if (firstName.indexOf(' ') >= 0) {
+      /*if (firstName.indexOf(' ') >= 0) {
         firstName = name.split(' ').slice(0, -1).join(' ');
-      }
-      $this = $("#sendMessageButton");
+      }*/
+      $this = $("#submitBtn");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
-      $.ajax({
+      $this.innerHtml='Submitting';
+      /*$.ajax({
         url: "././mail/contact_me.php",
         type: "POST",
         data: {
-          name: name,
-          phone: phone,
-          email: email,
-          message: message
-        },
+          diseasetype: diseasetype,
+          location: location,
+          date: date
+        },*/
         cache: false,
         success: function() {
           // Success message
@@ -35,7 +35,7 @@ $(function() {
           $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
           $('#success > .alert-success')
-            .append("<strong>Your message has been sent. </strong>");
+            .append("<strong>Submission successful. </strong>");
           $('#success > .alert-success')
             .append('</div>');
           //clear all fields
@@ -46,7 +46,7 @@ $(function() {
           $('#success').html("<div class='alert alert-danger'>");
           $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
-          $('#success > .alert-danger').append($("<strong>").text("Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!"));
+          $('#success > .alert-danger').append($("<strong>").text("Submission failed, please try again!"));
           $('#success > .alert-danger').append('</div>');
           //clear all fields
           $('#contactForm').trigger("reset");
