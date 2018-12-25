@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
     <title>MauriHealth Disease Data Collection</title>
-
+     
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -136,8 +136,10 @@
 
 
 </style>
-    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
-
+     
+     <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script> 
+     <!--<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+-->
 
   </head>
 
@@ -265,9 +267,11 @@
                 <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
               </div>
             </form>-->
+
             <form action="https://getsimpleform.com/messages?form_api_token=5187dc58be4648f24c7cde2bbe746c04" method="post">
 
               <input type='hidden' name='redirect_to' value='https://ndoomah.github.io/maurihealth/' />
+              <!--<form name="inputForm" action="javascript:;" onsubmit="saveToFirebase(this)">-->
 
                 <label style="font-size: 20px"><strong>Disease type:</strong></label>
                 <div id="disease_selection">
@@ -305,11 +309,11 @@
                 <td style="text-indent: 30px;">
                 <textarea id="msg"></textarea></td>
                 </tr></table>
-                <!--<button id="submitBtn" class="btn first">Submit</button>-->
+                
                 <div id="success"></div>
-                <button type="submit" id="submitBtn" onClick='changeTxt();'>Submit</button>
+                <button type="submit" id="inputBtn">Submit</button>
               </form>
-            
+
           </div>
         </div>
       </div>
@@ -329,6 +333,8 @@
         <i class="fa fa-chevron-up"></i>
       </a>
     </div>
+
+    
 
     <!-- """""""""""""js scripts""""""""""""""""-->
 
